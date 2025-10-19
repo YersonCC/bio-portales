@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
+import Navbar from "./components/Navbar";
 
-export default function App() {
+export default function App({ children }) {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold">
-        Hello, Biodiversity Portals!
-      </h1>
+    <div className="min-h-screen">
+      <Navbar />
+      {children}
     </div>
-  )
+  );
 }
