@@ -16,8 +16,17 @@ export default function ModulesSection() {
   }, []);
 
   return (
-    <section className="bg-white py-20 px-6 flex justify-center">
-      <div className="max-w-7xl w-full text-center">
+    <section
+      className="relative bg-white py-20 px-6 flex justify-center bg-cover bg-center overflow-hidden"
+      style={{
+        backgroundImage: "url('/img/bg-modulos.svg')",
+      }}
+    >
+      {/* 🔳 Degradado sutil de blanco a transparente (mitad inferior) */}
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white/90 to-transparent z-0"></div>
+
+      {/* Contenido */}
+      <div className="relative max-w-7xl w-full text-center z-10">
         <h2 className="text-4xl font-bold text-gray-800 mb-2">Módulos</h2>
         <p className="text-gray-500 mb-12">Explora nuestros módulos educativos</p>
 
@@ -31,15 +40,14 @@ export default function ModulesSection() {
                 alt="Biodiversidad"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                <div className="w-6 h-2 rounded bg-white"></div>
-              </div>
             </div>
             <div className="p-7 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 Protectores de la Biodiversidad
               </h3>
-              <p className="text-gray-500 mb-4">Aprende sobre la biodiversidad local.</p>
+              <p className="text-gray-500 mb-4">
+                Aprende sobre la biodiversidad local.
+              </p>
               <div className="flex gap-2 mb-6">
                 <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">
                   🦋 Fauna
@@ -111,9 +119,6 @@ export default function ModulesSection() {
                 alt="Fauna Guard"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                <div className="w-6 h-2 rounded bg-white"></div>
-              </div>
             </div>
             <div className="p-7 flex flex-col flex-grow">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">FAUNA GUARD</h3>
@@ -126,7 +131,7 @@ export default function ModulesSection() {
                 </span>
               </div>
               <a
-                href="/creditos"
+                href="/faunaguard"
                 className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto"
               >
                 ¡Explorar!

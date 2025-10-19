@@ -1,14 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronUp, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   return (
-    <nav className="w-full bg-white shadow-sm">
-      <div className="container mx-auto flex justify-center py-4">
+    <nav className="w-full bg-white shadow-sm relative z-50">
+      <div className="container mx-auto flex justify-center py-6">
         <ul className="flex space-x-8 text-gray-800 font-medium">
           {/* INICIO */}
           <li>
@@ -21,12 +24,11 @@ export default function Navbar() {
           </li>
 
           {/* MÓDULOS */}
-          <li
-            className="relative"
-            onMouseEnter={() => setMenuOpen(true)}
-            onMouseLeave={() => setMenuOpen(false)}
-          >
-            <button className="flex items-center space-x-1 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 pb-1 transition">
+          <li className="relative">
+            <button
+              onClick={toggleMenu}
+              className="flex items-center space-x-1 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 pb-1 transition focus:outline-none"
+            >
               <span>Modulos</span>
               {menuOpen ? (
                 <ChevronUp size={16} className="mt-0.5" />
@@ -41,6 +43,7 @@ export default function Navbar() {
                   <Link
                     to="/protectores"
                     className="block px-4 py-2 text-green-700 hover:bg-green-50 transition"
+                    onClick={() => setMenuOpen(false)}
                   >
                     Protectores de la Biodiversidad
                   </Link>
@@ -49,6 +52,7 @@ export default function Navbar() {
                   <Link
                     to="/bioportal"
                     className="block px-4 py-2 text-green-700 hover:bg-green-50 transition"
+                    onClick={() => setMenuOpen(false)}
                   >
                     BioPortal
                   </Link>
@@ -57,6 +61,7 @@ export default function Navbar() {
                   <Link
                     to="/faunaguard"
                     className="block px-4 py-2 text-green-700 hover:bg-green-50 transition"
+                    onClick={() => setMenuOpen(false)}
                   >
                     FaunaGuard
                   </Link>
@@ -76,6 +81,14 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+
+      {/* Cerrar el menú si se hace clic fuera */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 z-40"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )}
     </nav>
   );
 }

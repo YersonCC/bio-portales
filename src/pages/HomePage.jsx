@@ -8,7 +8,7 @@ export default function HomePage() {
       <section className="relative h-[40vh] flex items-center justify-center text-center overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src="/assets/video/banner.mp4"
+          src="/video/oso.mp4"
           autoPlay
           loop
           muted
@@ -21,8 +21,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Nueva sección de módulos */}
+      {/* sección de módulos */}
       <ModulesSection />
+
+      <section className="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
+        
+        <div className="relative z-10 text-gray-800">
+          <h2 className="text-3xl font-semibold mt-2">CREDITOS</h2>
+        </div>
+
+      </section>
+
     </>
   );
 }
