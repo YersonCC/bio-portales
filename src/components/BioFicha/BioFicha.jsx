@@ -4,7 +4,7 @@ import { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import MainContent from "./MainContent";
-import { fichaData } from "./data";
+import { fichaData } from "../../data/data";
 
 export default function BioFicha() {
   const [activeTab, setActiveTab] = useState("general");
