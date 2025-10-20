@@ -24,12 +24,36 @@ export default function HomePage() {
       {/* sección de módulos */}
       <ModulesSection />
 
-      <section className="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
-        
-        <div className="relative z-10 text-gray-800">
-          <h2 className="text-3xl font-semibold mt-2">CREDITOS</h2>
+      <section className="relative py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">CRÉDITOS</h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 items-center justify-items-center">
+            <div className="flex items-center justify-center w-full h-32 transition-transform duration-300 hover:scale-110">
+              <img 
+                src="/img/IE_Humberto.png" 
+                alt="IE Humberto Muñoz Ordóñez" 
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            
+            <div className="flex items-center justify-center w-full h-32 transition-transform duration-300 hover:scale-110">
+              <img 
+                src="/img/Logouniamazonia.png" 
+                alt="Logo Amazonía" 
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            
+            <div className="flex items-center justify-center w-full h-32 transition-transform duration-300 hover:scale-110 col-span-2 md:col-span-1">
+              <img 
+                src="/img/pitalito.png" 
+                alt="Pitalito" 
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+          </div>
         </div>
-
       </section>
 
     </>

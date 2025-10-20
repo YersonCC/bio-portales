@@ -32,30 +32,37 @@ export default function ModulesSection() {
 
         {/* Grid de Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Card 1 */}
+          {/* Card 1 - Mapa */}
           <div className="bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
             <div className="relative h-64 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
-                alt="Biodiversidad"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-              />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127488.54088344544!2d-76.11635304999999!3d1.8538889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e257254e6f006ab%3A0x7b7c58b5de3e3e8e!2sPitalito%2C%20Huila!5e0!3m2!1ses!2sco!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0, pointerEvents: 'none' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mapa de Pitalito, Huila"
+              ></iframe>
+              <div className="absolute inset-0 cursor-default"></div>
             </div>
-            <div className="p-7 flex flex-col flex-grow">
+            <div className="p-7 flex flex-col flex-grow justify-center items-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 Protectores de la Biodiversidad
               </h3>
               <p className="text-gray-500 mb-4">
-                Aprende sobre la biodiversidad local.
+                Explora los Ecosistemas estratégicos de Pitalito
+
               </p>
               <div className="flex gap-2 mb-6">
-                <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">
-                  🦋 Fauna
+                <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-xl text-sm font-medium border border-gray-200">
+                  ¡Anímate a navegar por el territorio!
                 </span>
               </div>
               <a
                 href="/protectores"
-                className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto"
+                className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto w-full text-center"
               >
                 ¡Explorar!
               </a>
@@ -82,29 +89,28 @@ export default function ModulesSection() {
                 {images.map((_, index) => (
                   <div
                     key={index}
-                    className={`transition-all cursor-pointer ${
-                      index === currentIndex
+                    className={`transition-all cursor-pointer ${index === currentIndex
                         ? "w-6 h-2 rounded bg-white"
                         : "w-2 h-2 rounded-full bg-white/50"
-                    }`}
+                      }`}
                     onClick={() => setCurrentIndex(index)}
                   ></div>
                 ))}
               </div>
             </div>
-            <div className="p-7 flex flex-col flex-grow">
+            <div className="p-7 flex flex-col flex-grow justify-center items-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">Bioportal</h3>
               <p className="text-gray-500 mb-4">
-                Explora los módulos interactivos del proyecto.
+                Conoce la avifauna presente en Pitalito
               </p>
               <div className="flex gap-2 mb-6">
-                <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">
-                  🌿 Flora
+                <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-xl text-sm font-medium border border-gray-200">
+                  ¡Conoce a detalle tu especie favorita!
                 </span>
               </div>
               <a
                 href="/bioportal"
-                className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto"
+                className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto w-full text-center"
               >
                 ¡Explorar!
               </a>
@@ -120,19 +126,22 @@ export default function ModulesSection() {
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
             </div>
-            <div className="p-7 flex flex-col flex-grow">
+            <div className="p-7 flex flex-col flex-grow justify-center items-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">FAUNA GUARD</h3>
               <p className="text-gray-500 mb-4">
-                Conoce las especies protegidas y su importancia ecológica.
+                Actividades Interactivas de
+                Sensibilización,
+                Cuidado y protección de la biodiversidad
+
               </p>
               <div className="flex gap-2 mb-6">
                 <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">
-                  🐾 Conservación
+                  ¡Diviértete aprendiendo!
                 </span>
               </div>
               <a
                 href="/faunaguard"
-                className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto"
+                className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto w-full text-center"
               >
                 ¡Explorar!
               </a>

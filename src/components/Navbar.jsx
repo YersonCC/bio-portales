@@ -17,7 +17,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/"
-              className="hover:text-green-600 border-b-2 border-transparent hover:border-green-600 pb-1 transition"
+              className="hover:text-[#4DA428] border-b-2 border-transparent hover:border-[#4DA428] pb-1 transition"
             >
               Inicio
             </Link>
@@ -27,7 +27,7 @@ export default function Navbar() {
           <li className="relative">
             <button
               onClick={toggleMenu}
-              className="flex items-center space-x-1 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 pb-1 transition focus:outline-none"
+              className="flex items-center space-x-1 hover:text-[#4DA428] border-b-2 border-transparent hover:border-[#4DA428] pb-1 transition focus:outline-none"
             >
               <span>Modulos</span>
               {menuOpen ? (
@@ -42,7 +42,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     to="/protectores"
-                    className="block px-4 py-2 text-green-700 hover:bg-green-50 transition"
+                    className="block px-4 py-2 text-[#4DA428] hover:bg-[#4DA428]/10 transition"
                     onClick={() => setMenuOpen(false)}
                   >
                     Protectores de la Biodiversidad
@@ -51,7 +51,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     to="/bioportal"
-                    className="block px-4 py-2 text-green-700 hover:bg-green-50 transition"
+                    className="block px-4 py-2 text-[#4DA428] hover:bg-[#4DA428]/10 transition"
                     onClick={() => setMenuOpen(false)}
                   >
                     BioPortal
@@ -60,7 +60,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     to="/faunaguard"
-                    className="block px-4 py-2 text-green-700 hover:bg-green-50 transition"
+                    className="block px-4 py-2 text-[#4DA428] hover:bg-[#4DA428]/10 transition"
                     onClick={() => setMenuOpen(false)}
                   >
                     FaunaGuard
@@ -74,7 +74,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/creditos"
-              className="hover:text-green-600 border-b-2 border-transparent hover:border-green-600 pb-1 transition"
+              className="hover:text-[#4DA428] border-b-2 border-transparent hover:border-[#4DA428] pb-1 transition"
             >
               Créditos
             </Link>
