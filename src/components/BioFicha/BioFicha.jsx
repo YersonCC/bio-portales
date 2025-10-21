@@ -1,12 +1,10 @@
 import React from "react";
-
 import { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import MainContent from "./MainContent";
-import { fichaData } from "../../data/data";
 
-export default function BioFicha() {
+export default function BioFicha({ data }) {
   const [activeTab, setActiveTab] = useState("general");
 
   const tabs = [
@@ -18,21 +16,20 @@ export default function BioFicha() {
     { id: "reproduccion", label: "Reproducción", icon: "👶" },
     { id: "conservacion", label: "Conservación", icon: "🛡️" },
     { id: "distribucion", label: "Distribución", icon: "🗺️" },
-    
   ];
 
   return (
     <div className="max-w-6xl mx-auto p-4">
       <Header
-        comun={fichaData.comun}
-        cient={fichaData.cient}
-        frase={fichaData.frase}
-        estado={fichaData.estado}
+        comun={data.comun}
+        cient={data.cient}
+        frase={data.frase}
+        estado={data.estado}
       />
 
       <div className="grid md:grid-cols-[260px_1fr] gap-4 mt-4">
         <Sidebar tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
-        <MainContent activeTab={activeTab} data={fichaData} />
+        <MainContent activeTab={activeTab} data={data} />
       </div>
     </div>
   );

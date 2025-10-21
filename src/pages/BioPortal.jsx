@@ -1,18 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import BioFicha from "../components/BioFicha/BioFicha";
+import { especiesData } from "../data/data";
 
 export default function BioPortal() {
   const [open, setOpen] = useState(false);
+  const [especieSeleccionada, setEspecieSeleccionada] = useState(null);
 
-  const especies = [
-    {
-      id: 1,
-      nombre: "Danta de Montaña",
-      cientifico: "Tapirus pinchaque",
-      imagen: "/img/danta.jpg",
-    },
-  ];
+  const handleVerFicha = (especie) => {
+    setEspecieSeleccionada(especie);
+    setOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-6">
@@ -22,24 +20,24 @@ export default function BioPortal() {
 
       {/* GRID DE CARDS */}
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {especies.map((especie) => (
+        {especiesData.map((especie) => (
           <div
             key={especie.id}
             className="bg-white border border-gray-200 rounded-2xl shadow hover:shadow-lg transition p-4 flex flex-col items-center text-center"
           >
             <img
               src={especie.imagen}
-              alt={especie.nombre}
+              alt={especie.comun}
               className="w-full h-56 object-cover rounded-xl mb-4"
             />
             <h2 className="text-xl font-semibold text-gray-800">
-              {especie.nombre}
+              {especie.comun}
             </h2>
             <p className="text-sm text-gray-500 italic mb-4">
-              {especie.cientifico}
+              {especie.cient}
             </p>
             <button
-              onClick={() => setOpen(true)}
+              onClick={() => handleVerFicha(especie)}
               className="bg-[#4DA428] text-white px-6 py-2 rounded-xl hover:bg-[#3e8b1d] transition w-full"
             >
               Ver ficha
@@ -49,7 +47,7 @@ export default function BioPortal() {
       </div>
 
       {/* MODAL */}
-      {open && (
+      {open && especieSeleccionada && (
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 p-4">
           <div className="relative bg-white rounded-2xl shadow-lg w-full max-w-6xl max-h-[90vh] overflow-y-auto">
             {/* BOTÓN CERRAR */}
@@ -62,7 +60,7 @@ export default function BioPortal() {
 
             {/* FICHA */}
             <div className="p-6">
-              <BioFicha />
+              <BioFicha data={especieSeleccionada} />
             </div>
           </div>
         </div>
@@ -70,4 +68,3 @@ export default function BioPortal() {
     </div>
   );
 }
-
