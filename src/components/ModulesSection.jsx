@@ -27,8 +27,8 @@ export default function ModulesSection() {
 
       {/* Contenido */}
       <div className="relative max-w-7xl w-full text-center z-10">
-        <h2 className="text-4xl font-bold text-gray-800 mb-2">Módulos</h2>
-        <p className="text-gray-500 mb-12">Explora nuestros módulos educativos</p>
+        <h2 className="text-4xl font-bold text-gray-800 mb-2">Portales</h2>
+        <p className="text-gray-500 mb-12">Explora nuestros portales educativos</p>
 
         {/* Grid de Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -49,7 +49,7 @@ export default function ModulesSection() {
             </div>
             <div className="p-7 flex flex-col flex-grow justify-center items-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                Protectores de la Biodiversidad
+                PROTECTORES DE LA BIODIVERSIDAD
               </h3>
               <p className="text-gray-500 mb-4">
                 Explora los Ecosistemas estratégicos de Pitalito
@@ -99,20 +99,20 @@ export default function ModulesSection() {
               </div>
             </div>
             <div className="p-7 flex flex-col flex-grow justify-center items-center">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Bioportal</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">BIOPORTAL</h3>
               <p className="text-gray-500 mb-4">
-                Conoce la avifauna presente en Pitalito
+                Conoce los registros estadísticos de la fauna presente en Pitalito
               </p>
               <div className="flex gap-2 mb-6">
                 <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-xl text-sm font-medium border border-gray-200">
-                  ¡Conoce a detalle tu especie favorita!
+                  ¡Explora datos actualizados sobre biodiversidad local!
                 </span>
               </div>
               <a
                 href="/bioportal"
                 className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto w-full text-center"
               >
-                ¡Explorar!
+                ¡Consulta los registros!
               </a>
             </div>
           </div>
@@ -129,21 +129,18 @@ export default function ModulesSection() {
             <div className="p-7 flex flex-col flex-grow justify-center items-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">FAUNA GUARD</h3>
               <p className="text-gray-500 mb-4">
-                Actividades Interactivas de
-                Sensibilización,
-                Cuidado y protección de la biodiversidad
-
+                Reporta accidentes o incidentes relacionados con fauna silvestre
               </p>
               <div className="flex gap-2 mb-6">
                 <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium border border-gray-200">
-                  ¡Diviértete aprendiendo!
+                  ¡Ayuda a proteger nuestra biodiversidad!
                 </span>
               </div>
               <a
                 href="/faunaguard"
                 className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto w-full text-center"
               >
-                ¡Explorar!
+                ¡Reporta un caso!
               </a>
             </div>
           </div>

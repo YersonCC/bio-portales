@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav className="w-full bg-[#4DA428] shadow-sm relative z-50">
       <div className="container mx-auto flex justify-center py-6">
-        <ul className="flex space-x-8 text-gray-800 font-medium">
+        <ul className="flex space-x-8 text-white font-medium">
           {/* INICIO */}
           <li>
             <Link
@@ -23,13 +23,13 @@ export default function Navbar() {
             </Link>
           </li>
 
-          {/* MÓDULOS */}
+          {/* Portales */}
           <li className="relative">
             <button
               onClick={toggleMenu}
               className="flex items-center space-x-1 hover:text-white border-b-2 border-transparent hover:border-white pb-1 transition focus:outline-none"
             >
-              <span>Modulos</span>
+              <span>Portales</span>
               {menuOpen ? (
                 <ChevronUp size={16} className="mt-0.5" />
               ) : (
@@ -74,7 +74,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/creditos"
-              className="hover:text-white border-b-2 border-transparent hover:border-[#4DA428] pb-1 transition"
+              className="hover:text-white border-b-2 border-transparent hover:border-white pb-1 transition"
             >
               Créditos
             </Link>
