@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ModulesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,19 +54,18 @@ export default function ModulesSection() {
               </h3>
               <p className="text-gray-500 mb-4">
                 Explora los Ecosistemas estratégicos de Pitalito
-
               </p>
               <div className="flex gap-2 mb-6">
                 <span className="bg-gray-100 text-green-600 px-3 py-1 rounded-xl text-sm font-medium border border-gray-200">
                   ¡Anímate a navegar por el territorio!
                 </span>
               </div>
-              <a
-                href="/protectores"
+              <Link
+                to="/protectores"
                 className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto w-full text-center"
               >
                 ¡Explorar!
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -108,12 +108,12 @@ export default function ModulesSection() {
                   ¡Explora datos actualizados sobre biodiversidad local!
                 </span>
               </div>
-              <a
-                href="/bioportal"
+              <Link
+                to="/bioportal"
                 className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto w-full text-center"
               >
                 ¡Consulta los registros!
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -136,12 +136,12 @@ export default function ModulesSection() {
                   ¡Ayuda a proteger nuestra biodiversidad!
                 </span>
               </div>
-              <a
-                href="/faunaguard"
+              <Link
+                to="/faunaguard"
                 className="bg-[#4DA428] text-white py-3 rounded-xl font-semibold hover:bg-[#3e8b1d] transition-all shadow-md hover:shadow-lg mt-auto w-full text-center"
               >
                 ¡Reporta un caso!
-              </a>
+              </Link>
             </div>
           </div>
         </div>
